@@ -58,6 +58,25 @@ export class ProjectConfig extends SeedConfig {
 
     /* Add to or override NPM module configurations: */
     // this.PLUGIN_CONFIGS['browser-sync'] = { ghostMode: false };
+    const MY_APPS = [
+      'todo',
+      'app'
+    ];
+
+    MY_APPS.forEach(
+      (BOOTSTRAP_DIR) => {
+
+        let BOOTSTRAP_MODULE = `${BOOTSTRAP_DIR}/main`;
+
+        this.SYSTEM_CONFIG_DEV.paths[BOOTSTRAP_MODULE]    = `${this.APP_BASE}${BOOTSTRAP_MODULE}`;
+        this.SYSTEM_CONFIG_DEV.paths[`${BOOTSTRAP_DIR}/`] = `${this.APP_BASE}${BOOTSTRAP_DIR}/`;
+        this.SYSTEM_CONFIG_DEV.packages[BOOTSTRAP_DIR]    = {defaultExtension: 'js'};
+
+        this.SYSTEM_BUILDER_CONFIG.paths[join(this.TMP_DIR, BOOTSTRAP_DIR, '*',)]
+          = `${this.TMP_DIR}/${BOOTSTRAP_DIR}/*`;
+
+      },
+    );
   }
 
 }
