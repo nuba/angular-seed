@@ -7,7 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AboutModule } from './about/about.module';
 import { HomeModule } from './home/home.module';
-import { SharedModule } from './shared/shared.module';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({

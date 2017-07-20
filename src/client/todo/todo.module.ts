@@ -5,7 +5,7 @@ import { HttpModule } from '@angular/http';
 import { TodoComponent } from './todo.component';
 import { TodoRoutingModule } from './todo-routing.module';
 
-import { SharedModule } from '../app/shared/shared.module';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({

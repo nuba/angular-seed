@@ -58,7 +58,10 @@ export class ProjectConfig extends SeedConfig {
 
     /* Add to or override NPM module configurations: */
     // this.PLUGIN_CONFIGS['browser-sync'] = { ghostMode: false };
+
+    /* Multiple apps from this same seed! */
     const MY_APPS = [
+      'shared',
       'todo',
       'app'
     ];

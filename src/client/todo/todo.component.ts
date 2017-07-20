@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Config } from '../app/shared/config/env.config';
+import { Config } from '../shared/config/env.config';
 
 /**
  * This class represents the main application component.
